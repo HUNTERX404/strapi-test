@@ -34,12 +34,6 @@
       "relation": "oneToOne",
       "target": "api::restaurant.restaurant",
       "inversedBy": "owner"
-    },
-    "category": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::category.category",
-      "mappedBy": "owner"
     }
   }
 }

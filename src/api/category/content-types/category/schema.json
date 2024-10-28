@@ -4,7 +4,8 @@
   "info": {
     "singularName": "category",
     "pluralName": "categories",
-    "displayName": "category"
+    "displayName": "category",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -17,18 +18,18 @@
       "minLength": 2
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+      ]
     },
-    "owner": {
+    "restaurant": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::owner.owner",
+      "target": "api::restaurant.restaurant",
       "inversedBy": "category"
     }
   }
