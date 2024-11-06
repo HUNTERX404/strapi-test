@@ -529,6 +529,7 @@ export interface ApiOwnerOwner extends Struct.CollectionTypeSchema {
     singularName: 'owner';
     pluralName: 'owners';
     displayName: 'owner';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -545,10 +546,6 @@ export interface ApiOwnerOwner extends Struct.CollectionTypeSchema {
         minLength: 4;
       }>;
     image: Schema.Attribute.Media<'images'>;
-    restaurant: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::restaurant.restaurant'
-    >;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -643,8 +640,8 @@ export interface ApiRestaurantRestaurant extends Struct.CollectionTypeSchema {
       }>;
     image: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
-    owner: Schema.Attribute.Relation<'oneToOne', 'api::owner.owner'>;
     category: Schema.Attribute.Relation<'oneToOne', 'api::category.category'>;
+    owner: Schema.Attribute.Relation<'oneToOne', 'api::owner.owner'>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

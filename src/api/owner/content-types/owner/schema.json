@@ -4,7 +4,8 @@
   "info": {
     "singularName": "owner",
     "pluralName": "owners",
-    "displayName": "owner"
+    "displayName": "owner",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -22,18 +23,12 @@
       "minLength": 4
     },
     "image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": false
-    },
-    "restaurant": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::restaurant.restaurant",
-      "inversedBy": "owner"
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

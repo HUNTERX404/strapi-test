@@ -26,17 +26,16 @@
         "files"
       ]
     },
-    "owner": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::owner.owner",
-      "mappedBy": "restaurant"
-    },
     "category": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::category.category",
       "mappedBy": "restaurant"
+    },
+    "owner": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::owner.owner"
     }
   }
 }
